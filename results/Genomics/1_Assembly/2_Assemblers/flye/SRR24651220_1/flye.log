@@ -1,0 +1,1052 @@
+[2026-03-19 19:21:31] root: INFO: Starting Flye 2.7-b1585
+[2026-03-19 19:21:31] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --genome-size 3.8m --threads 8 --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1
+[2026-03-19 19:21:31] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-19 19:21:31] root: INFO: >>>STAGE: configure
+[2026-03-19 19:21:31] root: INFO: Configuring run
+[2026-03-19 19:22:10] root: INFO: Total read length: 3801103172
+[2026-03-19 19:22:10] root: INFO: Input genome size: 3800000
+[2026-03-19 19:22:10] root: INFO: Estimated coverage: 1000
+[2026-03-19 19:22:10] root: INFO: Reads N50/N90: 24242 / 8111
+[2026-03-19 19:22:10] root: INFO: Minimum overlap set to 5000
+[2026-03-19 19:22:10] root: INFO: Selected k-mer size: 15
+[2026-03-19 19:22:10] root: INFO: >>>STAGE: assembly
+[2026-03-19 19:22:10] root: INFO: Assembling disjointigs
+[2026-03-19 19:22:10] root: DEBUG: -----Begin assembly log------
+[2026-03-19 19:22:10] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 8 --min-ovlp 5000 --kmer 15
+[2026-03-19 19:22:10] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-19 19:22:10] DEBUG: Total RAM: 7 Gb
+[2026-03-19 19:22:10] DEBUG: Available RAM: 5 Gb
+[2026-03-19 19:22:10] DEBUG: Total CPUs: 20
+[2026-03-19 19:22:10] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-19 19:22:10] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-19 19:22:10] DEBUG: 	big_genome_threshold=29000000
+[2026-03-19 19:22:10] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-19 19:22:10] DEBUG: 	chimera_window=100
+[2026-03-19 19:22:10] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-19 19:22:10] DEBUG: 	max_inner_reads=10
+[2026-03-19 19:22:10] DEBUG: 	max_inner_fraction=0.25
+[2026-03-19 19:22:10] DEBUG: 	max_separation=500
+[2026-03-19 19:22:10] DEBUG: 	unique_edge_length=50000
+[2026-03-19 19:22:10] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-19 19:22:10] DEBUG: 	out_paths_ratio=5
+[2026-03-19 19:22:10] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-19 19:22:10] DEBUG: 	coverage_estimate_window=100
+[2026-03-19 19:22:10] DEBUG: 	max_bubble_length=50000
+[2026-03-19 19:22:10] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-19 19:22:10] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-19 19:22:10] DEBUG: 	weak_detach_rate=5
+[2026-03-19 19:22:10] DEBUG: 	tip_coverage_rate=2
+[2026-03-19 19:22:10] DEBUG: 	tip_length_rate=2
+[2026-03-19 19:22:10] DEBUG: 	low_cutoff_warning=1
+[2026-03-19 19:22:10] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-19 19:22:10] DEBUG: 	assemble_kmer_sample=1
+[2026-03-19 19:22:10] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-19 19:22:10] DEBUG: 	read_align_kmer_sample=1
+[2026-03-19 19:22:10] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-19 19:22:10] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-19 19:22:10] DEBUG: 	maximum_jump=1500
+[2026-03-19 19:22:10] DEBUG: 	maximum_overhang=1500
+[2026-03-19 19:22:10] DEBUG: 	repeat_kmer_rate=100
+[2026-03-19 19:22:10] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-19 19:22:10] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-19 19:22:10] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-19 19:22:10] DEBUG: 	add_unassembled_reads=0
+[2026-03-19 19:22:10] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-19 19:22:10] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-19 19:22:10] DEBUG: 	short_tip_length=20000
+[2026-03-19 19:22:10] DEBUG: 	long_tip_length=100000
+[2026-03-19 19:22:10] DEBUG: Running with k-mer size: 15
+[2026-03-19 19:22:10] DEBUG: Running with minimum overlap 5000
+[2026-03-19 19:22:10] DEBUG: Metagenome mode: N
+[2026-03-19 19:22:10] INFO: Reading sequences
+[2026-03-19 19:22:41] DEBUG: Building positional index
+[2026-03-19 19:22:41] DEBUG: Total sequence: 3801103172 bp
+[2026-03-19 19:22:41] DEBUG: Expected read coverage: 1000
+[2026-03-19 19:22:41] INFO: Generating solid k-mer index
+[2026-03-19 19:22:41] DEBUG: Hard threshold set to 5
+[2026-03-19 19:22:41] DEBUG: Started k-mer counting
+[2026-03-19 19:23:00] INFO: Counting k-mers (1/2):
+[2026-03-19 19:24:31] INFO: Counting k-mers (2/2):
+[2026-03-19 20:20:20] root: INFO: Starting Flye 2.7-b1585
+[2026-03-19 20:20:20] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --genome-size 3.8m --threads 8 --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1
+[2026-03-19 20:20:20] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-19 20:20:20] root: INFO: >>>STAGE: configure
+[2026-03-19 20:20:20] root: INFO: Configuring run
+[2026-03-19 20:20:48] root: INFO: Total read length: 3801103172
+[2026-03-19 20:20:48] root: INFO: Input genome size: 3800000
+[2026-03-19 20:20:48] root: INFO: Estimated coverage: 1000
+[2026-03-19 20:20:48] root: INFO: Reads N50/N90: 24242 / 8111
+[2026-03-19 20:20:48] root: INFO: Minimum overlap set to 5000
+[2026-03-19 20:20:48] root: INFO: Selected k-mer size: 15
+[2026-03-19 20:20:48] root: INFO: >>>STAGE: assembly
+[2026-03-19 20:20:48] root: INFO: Assembling disjointigs
+[2026-03-19 20:20:48] root: DEBUG: -----Begin assembly log------
+[2026-03-19 20:20:48] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 8 --min-ovlp 5000 --kmer 15
+[2026-03-19 20:20:48] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-19 20:20:48] DEBUG: Total RAM: 7 Gb
+[2026-03-19 20:20:48] DEBUG: Available RAM: 5 Gb
+[2026-03-19 20:20:48] DEBUG: Total CPUs: 20
+[2026-03-19 20:20:48] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-19 20:20:48] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-19 20:20:48] DEBUG: 	big_genome_threshold=29000000
+[2026-03-19 20:20:48] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-19 20:20:48] DEBUG: 	chimera_window=100
+[2026-03-19 20:20:48] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-19 20:20:48] DEBUG: 	max_inner_reads=10
+[2026-03-19 20:20:48] DEBUG: 	max_inner_fraction=0.25
+[2026-03-19 20:20:48] DEBUG: 	max_separation=500
+[2026-03-19 20:20:48] DEBUG: 	unique_edge_length=50000
+[2026-03-19 20:20:48] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-19 20:20:48] DEBUG: 	out_paths_ratio=5
+[2026-03-19 20:20:48] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-19 20:20:48] DEBUG: 	coverage_estimate_window=100
+[2026-03-19 20:20:48] DEBUG: 	max_bubble_length=50000
+[2026-03-19 20:20:48] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-19 20:20:48] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-19 20:20:48] DEBUG: 	weak_detach_rate=5
+[2026-03-19 20:20:48] DEBUG: 	tip_coverage_rate=2
+[2026-03-19 20:20:48] DEBUG: 	tip_length_rate=2
+[2026-03-19 20:20:48] DEBUG: 	low_cutoff_warning=1
+[2026-03-19 20:20:48] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-19 20:20:48] DEBUG: 	assemble_kmer_sample=1
+[2026-03-19 20:20:48] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-19 20:20:48] DEBUG: 	read_align_kmer_sample=1
+[2026-03-19 20:20:48] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-19 20:20:48] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-19 20:20:48] DEBUG: 	maximum_jump=1500
+[2026-03-19 20:20:48] DEBUG: 	maximum_overhang=1500
+[2026-03-19 20:20:48] DEBUG: 	repeat_kmer_rate=100
+[2026-03-19 20:20:48] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-19 20:20:48] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-19 20:20:48] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-19 20:20:48] DEBUG: 	add_unassembled_reads=0
+[2026-03-19 20:20:48] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-19 20:20:48] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-19 20:20:48] DEBUG: 	short_tip_length=20000
+[2026-03-19 20:20:48] DEBUG: 	long_tip_length=100000
+[2026-03-19 20:20:48] DEBUG: Running with k-mer size: 15
+[2026-03-19 20:20:48] DEBUG: Running with minimum overlap 5000
+[2026-03-19 20:20:48] DEBUG: Metagenome mode: N
+[2026-03-19 20:20:48] INFO: Reading sequences
+[2026-03-19 20:21:22] DEBUG: Building positional index
+[2026-03-19 20:21:22] DEBUG: Total sequence: 3801103172 bp
+[2026-03-19 20:21:22] DEBUG: Expected read coverage: 1000
+[2026-03-19 20:21:22] INFO: Generating solid k-mer index
+[2026-03-19 20:21:22] DEBUG: Hard threshold set to 5
+[2026-03-19 20:21:22] DEBUG: Started k-mer counting
+[2026-03-19 20:21:40] INFO: Counting k-mers (1/2):
+[2026-03-19 20:23:13] INFO: Counting k-mers (2/2):
+[2026-03-20 11:49:58] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 11:49:58] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --genome-size 3.8m --threads 8 --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1
+[2026-03-20 11:49:58] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 11:49:58] root: INFO: >>>STAGE: configure
+[2026-03-20 11:49:58] root: INFO: Configuring run
+[2026-03-20 11:50:35] root: INFO: Total read length: 3801103172
+[2026-03-20 11:50:35] root: INFO: Input genome size: 3800000
+[2026-03-20 11:50:35] root: INFO: Estimated coverage: 1000
+[2026-03-20 11:50:35] root: INFO: Reads N50/N90: 24242 / 8111
+[2026-03-20 11:50:35] root: INFO: Minimum overlap set to 5000
+[2026-03-20 11:50:35] root: INFO: Selected k-mer size: 15
+[2026-03-20 11:50:35] root: INFO: >>>STAGE: assembly
+[2026-03-20 11:50:35] root: INFO: Assembling disjointigs
+[2026-03-20 11:50:35] root: DEBUG: -----Begin assembly log------
+[2026-03-20 11:50:35] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 8 --min-ovlp 5000 --kmer 15
+[2026-03-20 11:50:35] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 11:50:35] DEBUG: Total RAM: 7 Gb
+[2026-03-20 11:50:35] DEBUG: Available RAM: 5 Gb
+[2026-03-20 11:50:35] DEBUG: Total CPUs: 20
+[2026-03-20 11:50:35] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 11:50:35] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 11:50:35] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 11:50:35] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 11:50:35] DEBUG: 	chimera_window=100
+[2026-03-20 11:50:35] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 11:50:35] DEBUG: 	max_inner_reads=10
+[2026-03-20 11:50:35] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 11:50:35] DEBUG: 	max_separation=500
+[2026-03-20 11:50:35] DEBUG: 	unique_edge_length=50000
+[2026-03-20 11:50:35] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 11:50:35] DEBUG: 	out_paths_ratio=5
+[2026-03-20 11:50:35] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 11:50:35] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 11:50:35] DEBUG: 	max_bubble_length=50000
+[2026-03-20 11:50:35] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 11:50:35] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 11:50:35] DEBUG: 	weak_detach_rate=5
+[2026-03-20 11:50:35] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 11:50:35] DEBUG: 	tip_length_rate=2
+[2026-03-20 11:50:35] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 11:50:35] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 11:50:35] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 11:50:35] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 11:50:35] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 11:50:35] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 11:50:35] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 11:50:35] DEBUG: 	maximum_jump=1500
+[2026-03-20 11:50:35] DEBUG: 	maximum_overhang=1500
+[2026-03-20 11:50:35] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 11:50:35] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 11:50:35] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 11:50:35] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 11:50:35] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 11:50:35] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 11:50:35] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 11:50:35] DEBUG: 	short_tip_length=20000
+[2026-03-20 11:50:35] DEBUG: 	long_tip_length=100000
+[2026-03-20 11:50:35] DEBUG: Running with k-mer size: 15
+[2026-03-20 11:50:35] DEBUG: Running with minimum overlap 5000
+[2026-03-20 11:50:35] DEBUG: Metagenome mode: N
+[2026-03-20 11:50:35] INFO: Reading sequences
+[2026-03-20 11:51:28] DEBUG: Building positional index
+[2026-03-20 11:51:28] DEBUG: Total sequence: 3801103172 bp
+[2026-03-20 11:51:29] DEBUG: Expected read coverage: 1000
+[2026-03-20 11:51:29] INFO: Generating solid k-mer index
+[2026-03-20 11:51:29] DEBUG: Hard threshold set to 5
+[2026-03-20 11:51:29] DEBUG: Started k-mer counting
+[2026-03-20 11:52:05] INFO: Counting k-mers (1/2):
+[2026-03-20 11:54:03] INFO: Counting k-mers (2/2):
+[2026-03-20 12:47:55] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 12:47:55] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --genome-size 3.8m --threads 8 --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1
+[2026-03-20 12:47:55] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 12:47:55] root: INFO: >>>STAGE: configure
+[2026-03-20 12:47:55] root: INFO: Configuring run
+[2026-03-20 12:48:52] root: INFO: Total read length: 3801103172
+[2026-03-20 12:48:52] root: INFO: Input genome size: 3800000
+[2026-03-20 12:48:52] root: INFO: Estimated coverage: 1000
+[2026-03-20 12:48:52] root: INFO: Reads N50/N90: 24242 / 8111
+[2026-03-20 12:48:52] root: INFO: Minimum overlap set to 5000
+[2026-03-20 12:48:52] root: INFO: Selected k-mer size: 15
+[2026-03-20 12:48:52] root: INFO: >>>STAGE: assembly
+[2026-03-20 12:48:52] root: INFO: Assembling disjointigs
+[2026-03-20 12:48:52] root: DEBUG: -----Begin assembly log------
+[2026-03-20 12:48:52] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 8 --min-ovlp 5000 --kmer 15
+[2026-03-20 12:48:52] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 12:48:52] DEBUG: Total RAM: 7 Gb
+[2026-03-20 12:48:52] DEBUG: Available RAM: 5 Gb
+[2026-03-20 12:48:52] DEBUG: Total CPUs: 20
+[2026-03-20 12:48:52] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 12:48:52] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 12:48:52] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 12:48:52] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 12:48:52] DEBUG: 	chimera_window=100
+[2026-03-20 12:48:52] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 12:48:52] DEBUG: 	max_inner_reads=10
+[2026-03-20 12:48:52] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 12:48:52] DEBUG: 	max_separation=500
+[2026-03-20 12:48:52] DEBUG: 	unique_edge_length=50000
+[2026-03-20 12:48:52] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 12:48:52] DEBUG: 	out_paths_ratio=5
+[2026-03-20 12:48:52] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 12:48:52] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 12:48:52] DEBUG: 	max_bubble_length=50000
+[2026-03-20 12:48:52] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 12:48:52] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 12:48:52] DEBUG: 	weak_detach_rate=5
+[2026-03-20 12:48:52] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 12:48:52] DEBUG: 	tip_length_rate=2
+[2026-03-20 12:48:52] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 12:48:52] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 12:48:52] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 12:48:52] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 12:48:52] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 12:48:52] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 12:48:52] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 12:48:52] DEBUG: 	maximum_jump=1500
+[2026-03-20 12:48:52] DEBUG: 	maximum_overhang=1500
+[2026-03-20 12:48:52] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 12:48:52] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 12:48:52] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 12:48:52] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 12:48:52] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 12:48:52] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 12:48:52] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 12:48:52] DEBUG: 	short_tip_length=20000
+[2026-03-20 12:48:52] DEBUG: 	long_tip_length=100000
+[2026-03-20 12:48:52] DEBUG: Running with k-mer size: 15
+[2026-03-20 12:48:52] DEBUG: Running with minimum overlap 5000
+[2026-03-20 12:48:52] DEBUG: Metagenome mode: N
+[2026-03-20 12:48:52] INFO: Reading sequences
+[2026-03-20 12:49:42] DEBUG: Building positional index
+[2026-03-20 12:49:43] DEBUG: Total sequence: 3801103172 bp
+[2026-03-20 12:49:43] DEBUG: Expected read coverage: 1000
+[2026-03-20 12:49:43] INFO: Generating solid k-mer index
+[2026-03-20 12:49:43] DEBUG: Hard threshold set to 5
+[2026-03-20 12:49:43] DEBUG: Started k-mer counting
+[2026-03-20 12:50:21] INFO: Counting k-mers (1/2):
+[2026-03-20 12:52:50] INFO: Counting k-mers (2/2):
+[2026-03-20 13:06:41] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 13:06:41] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --genome-size 3.8m --threads 8 --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1
+[2026-03-20 13:06:41] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 13:06:41] root: INFO: >>>STAGE: configure
+[2026-03-20 13:06:41] root: INFO: Configuring run
+[2026-03-20 13:07:18] root: INFO: Total read length: 3801103172
+[2026-03-20 13:07:18] root: INFO: Input genome size: 3800000
+[2026-03-20 13:07:18] root: INFO: Estimated coverage: 1000
+[2026-03-20 13:07:18] root: INFO: Reads N50/N90: 24242 / 8111
+[2026-03-20 13:07:18] root: INFO: Minimum overlap set to 5000
+[2026-03-20 13:07:18] root: INFO: Selected k-mer size: 15
+[2026-03-20 13:07:18] root: INFO: >>>STAGE: assembly
+[2026-03-20 13:07:18] root: INFO: Assembling disjointigs
+[2026-03-20 13:07:18] root: DEBUG: -----Begin assembly log------
+[2026-03-20 13:07:18] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 8 --min-ovlp 5000 --kmer 15
+[2026-03-20 13:07:18] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 13:07:18] DEBUG: Total RAM: 7 Gb
+[2026-03-20 13:07:18] DEBUG: Available RAM: 5 Gb
+[2026-03-20 13:07:18] DEBUG: Total CPUs: 20
+[2026-03-20 13:07:18] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 13:07:18] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 13:07:18] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 13:07:18] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 13:07:18] DEBUG: 	chimera_window=100
+[2026-03-20 13:07:18] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 13:07:18] DEBUG: 	max_inner_reads=10
+[2026-03-20 13:07:18] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 13:07:18] DEBUG: 	max_separation=500
+[2026-03-20 13:07:18] DEBUG: 	unique_edge_length=50000
+[2026-03-20 13:07:18] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 13:07:18] DEBUG: 	out_paths_ratio=5
+[2026-03-20 13:07:18] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 13:07:18] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 13:07:18] DEBUG: 	max_bubble_length=50000
+[2026-03-20 13:07:18] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 13:07:18] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 13:07:18] DEBUG: 	weak_detach_rate=5
+[2026-03-20 13:07:18] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 13:07:18] DEBUG: 	tip_length_rate=2
+[2026-03-20 13:07:18] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 13:07:18] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 13:07:18] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 13:07:18] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 13:07:18] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 13:07:18] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 13:07:18] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 13:07:18] DEBUG: 	maximum_jump=1500
+[2026-03-20 13:07:18] DEBUG: 	maximum_overhang=1500
+[2026-03-20 13:07:18] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 13:07:18] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 13:07:18] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 13:07:18] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 13:07:18] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 13:07:18] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 13:07:18] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 13:07:18] DEBUG: 	short_tip_length=20000
+[2026-03-20 13:07:18] DEBUG: 	long_tip_length=100000
+[2026-03-20 13:07:18] DEBUG: Running with k-mer size: 15
+[2026-03-20 13:07:18] DEBUG: Running with minimum overlap 5000
+[2026-03-20 13:07:18] DEBUG: Metagenome mode: N
+[2026-03-20 13:07:18] INFO: Reading sequences
+[2026-03-20 13:07:51] DEBUG: Building positional index
+[2026-03-20 13:07:51] DEBUG: Total sequence: 3801103172 bp
+[2026-03-20 13:07:51] DEBUG: Expected read coverage: 1000
+[2026-03-20 13:07:51] INFO: Generating solid k-mer index
+[2026-03-20 13:07:51] DEBUG: Hard threshold set to 5
+[2026-03-20 13:07:51] DEBUG: Started k-mer counting
+[2026-03-20 13:08:08] INFO: Counting k-mers (1/2):
+[2026-03-20 13:09:37] INFO: Counting k-mers (2/2):
+[2026-03-20 19:00:22] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 19:00:22] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1 --threads 2 --genome-size 3.8m --asm-coverage 50 --resume
+[2026-03-20 19:00:22] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 19:00:22] root: INFO: Resuming previous run
+[2026-03-20 19:00:22] root: INFO: >>>STAGE: assembly
+[2026-03-20 19:00:22] root: INFO: Assembling disjointigs
+[2026-03-20 19:00:22] root: DEBUG: -----Begin assembly log------
+[2026-03-20 19:00:22] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 2 --min-ovlp 5000 --kmer 15
+[2026-03-20 19:00:22] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 19:00:22] DEBUG: Total RAM: 7 Gb
+[2026-03-20 19:00:22] DEBUG: Available RAM: 7 Gb
+[2026-03-20 19:00:22] DEBUG: Total CPUs: 20
+[2026-03-20 19:00:23] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 19:00:23] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 19:00:23] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 19:00:23] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 19:00:23] DEBUG: 	chimera_window=100
+[2026-03-20 19:00:23] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 19:00:23] DEBUG: 	max_inner_reads=10
+[2026-03-20 19:00:23] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 19:00:23] DEBUG: 	max_separation=500
+[2026-03-20 19:00:23] DEBUG: 	unique_edge_length=50000
+[2026-03-20 19:00:23] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 19:00:23] DEBUG: 	out_paths_ratio=5
+[2026-03-20 19:00:23] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 19:00:23] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 19:00:23] DEBUG: 	max_bubble_length=50000
+[2026-03-20 19:00:23] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 19:00:23] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 19:00:23] DEBUG: 	weak_detach_rate=5
+[2026-03-20 19:00:23] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 19:00:23] DEBUG: 	tip_length_rate=2
+[2026-03-20 19:00:23] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 19:00:23] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 19:00:23] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 19:00:23] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 19:00:23] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 19:00:23] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 19:00:23] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 19:00:23] DEBUG: 	maximum_jump=1500
+[2026-03-20 19:00:23] DEBUG: 	maximum_overhang=1500
+[2026-03-20 19:00:23] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 19:00:23] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 19:00:23] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 19:00:23] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 19:00:23] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 19:00:23] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 19:00:23] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 19:00:23] DEBUG: 	short_tip_length=20000
+[2026-03-20 19:00:23] DEBUG: 	long_tip_length=100000
+[2026-03-20 19:00:23] DEBUG: Running with k-mer size: 15
+[2026-03-20 19:00:23] DEBUG: Running with minimum overlap 5000
+[2026-03-20 19:00:23] DEBUG: Metagenome mode: N
+[2026-03-20 19:00:23] INFO: Reading sequences
+[2026-03-20 19:00:56] DEBUG: Building positional index
+[2026-03-20 19:00:56] DEBUG: Total sequence: 3801103172 bp
+[2026-03-20 19:00:56] DEBUG: Expected read coverage: 1000
+[2026-03-20 19:00:56] INFO: Generating solid k-mer index
+[2026-03-20 19:00:56] DEBUG: Hard threshold set to 5
+[2026-03-20 19:00:56] DEBUG: Started k-mer counting
+[2026-03-20 19:01:21] INFO: Counting k-mers (1/2):
+[2026-03-20 19:05:35] INFO: Counting k-mers (2/2):
+[2026-03-20 19:18:12] DEBUG: Estimated minimum kmer coverage: 87
+[2026-03-20 19:18:12] DEBUG: Filtered 72419185 erroneous k-mers
+[2026-03-20 19:18:12] DEBUG: Repetitive k-mer frequency: 73503
+[2026-03-20 19:18:12] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-03-20 19:18:12] INFO: Filling index table
+[2026-03-20 19:18:13] DEBUG: Sampling rate: 1
+[2026-03-20 19:18:13] DEBUG: Solid k-mers: 3803109
+[2026-03-20 19:18:13] DEBUG: K-mer index size: 2795413759
+[2026-03-20 19:18:13] DEBUG: Mean k-mer frequency: 735.034
+[2026-03-20 19:25:11] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 19:25:11] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1 --threads 2 --genome-size 3.8m --asm-coverage 50 --resume
+[2026-03-20 19:25:11] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 19:25:11] root: INFO: Resuming previous run
+[2026-03-20 19:25:11] root: INFO: >>>STAGE: assembly
+[2026-03-20 19:25:11] root: INFO: Assembling disjointigs
+[2026-03-20 19:25:11] root: DEBUG: -----Begin assembly log------
+[2026-03-20 19:25:11] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 2 --min-ovlp 5000 --kmer 15
+[2026-03-20 19:25:11] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 19:25:11] DEBUG: Total RAM: 7 Gb
+[2026-03-20 19:25:11] DEBUG: Available RAM: 7 Gb
+[2026-03-20 19:25:11] DEBUG: Total CPUs: 20
+[2026-03-20 19:25:11] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 19:25:11] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 19:25:11] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 19:25:11] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 19:25:11] DEBUG: 	chimera_window=100
+[2026-03-20 19:25:11] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 19:25:11] DEBUG: 	max_inner_reads=10
+[2026-03-20 19:25:11] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 19:25:11] DEBUG: 	max_separation=500
+[2026-03-20 19:25:11] DEBUG: 	unique_edge_length=50000
+[2026-03-20 19:25:11] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 19:25:11] DEBUG: 	out_paths_ratio=5
+[2026-03-20 19:25:11] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 19:25:11] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 19:25:11] DEBUG: 	max_bubble_length=50000
+[2026-03-20 19:25:11] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 19:25:11] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 19:25:11] DEBUG: 	weak_detach_rate=5
+[2026-03-20 19:25:11] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 19:25:11] DEBUG: 	tip_length_rate=2
+[2026-03-20 19:25:11] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 19:25:11] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 19:25:11] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 19:25:11] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 19:25:11] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 19:25:11] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 19:25:11] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 19:25:11] DEBUG: 	maximum_jump=1500
+[2026-03-20 19:25:11] DEBUG: 	maximum_overhang=1500
+[2026-03-20 19:25:11] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 19:25:11] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 19:25:11] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 19:25:11] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 19:25:11] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 19:25:11] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 19:25:11] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 19:25:11] DEBUG: 	short_tip_length=20000
+[2026-03-20 19:25:11] DEBUG: 	long_tip_length=100000
+[2026-03-20 19:25:11] DEBUG: Running with k-mer size: 15
+[2026-03-20 19:25:11] DEBUG: Running with minimum overlap 5000
+[2026-03-20 19:25:11] DEBUG: Metagenome mode: N
+[2026-03-20 19:25:11] INFO: Reading sequences
+[2026-03-20 19:25:50] DEBUG: Building positional index
+[2026-03-20 19:25:50] DEBUG: Total sequence: 3801103172 bp
+[2026-03-20 19:25:50] DEBUG: Expected read coverage: 1000
+[2026-03-20 19:25:50] INFO: Generating solid k-mer index
+[2026-03-20 19:25:50] DEBUG: Hard threshold set to 5
+[2026-03-20 19:25:50] DEBUG: Started k-mer counting
+[2026-03-20 19:26:10] INFO: Counting k-mers (1/2):
+[2026-03-20 19:30:32] INFO: Counting k-mers (2/2):
+[2026-03-20 19:43:34] DEBUG: Estimated minimum kmer coverage: 87
+[2026-03-20 19:43:34] DEBUG: Filtered 72419185 erroneous k-mers
+[2026-03-20 19:43:34] DEBUG: Repetitive k-mer frequency: 73503
+[2026-03-20 19:43:34] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-03-20 19:43:34] INFO: Filling index table
+[2026-03-20 19:43:35] DEBUG: Sampling rate: 1
+[2026-03-20 19:43:35] DEBUG: Solid k-mers: 3803109
+[2026-03-20 19:43:35] DEBUG: K-mer index size: 2795413759
+[2026-03-20 19:43:35] DEBUG: Mean k-mer frequency: 735.034
+[2026-03-20 19:47:50] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 19:47:50] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_1.fastq --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1 --threads 1 --genome-size 3.8m --asm-coverage 30 --resume
+[2026-03-20 19:47:50] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 19:47:50] root: INFO: Resuming previous run
+[2026-03-20 19:47:50] root: INFO: >>>STAGE: assembly
+[2026-03-20 19:47:50] root: INFO: Assembling disjointigs
+[2026-03-20 19:47:50] root: DEBUG: -----Begin assembly log------
+[2026-03-20 19:47:50] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_1.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 1 --min-ovlp 5000 --kmer 15
+[2026-03-20 19:47:50] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 19:47:50] DEBUG: Total RAM: 7 Gb
+[2026-03-20 19:47:50] DEBUG: Available RAM: 7 Gb
+[2026-03-20 19:47:50] DEBUG: Total CPUs: 20
+[2026-03-20 19:47:50] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 19:47:50] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 19:47:50] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 19:47:50] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 19:47:50] DEBUG: 	chimera_window=100
+[2026-03-20 19:47:50] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 19:47:50] DEBUG: 	max_inner_reads=10
+[2026-03-20 19:47:50] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 19:47:50] DEBUG: 	max_separation=500
+[2026-03-20 19:47:50] DEBUG: 	unique_edge_length=50000
+[2026-03-20 19:47:50] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 19:47:50] DEBUG: 	out_paths_ratio=5
+[2026-03-20 19:47:50] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 19:47:50] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 19:47:50] DEBUG: 	max_bubble_length=50000
+[2026-03-20 19:47:50] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 19:47:50] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 19:47:50] DEBUG: 	weak_detach_rate=5
+[2026-03-20 19:47:50] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 19:47:50] DEBUG: 	tip_length_rate=2
+[2026-03-20 19:47:50] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 19:47:50] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 19:47:50] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 19:47:50] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 19:47:50] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 19:47:50] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 19:47:50] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 19:47:50] DEBUG: 	maximum_jump=1500
+[2026-03-20 19:47:50] DEBUG: 	maximum_overhang=1500
+[2026-03-20 19:47:50] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 19:47:50] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 19:47:50] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 19:47:50] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 19:47:50] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 19:47:50] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 19:47:50] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 19:47:50] DEBUG: 	short_tip_length=20000
+[2026-03-20 19:47:50] DEBUG: 	long_tip_length=100000
+[2026-03-20 19:47:50] DEBUG: Running with k-mer size: 15
+[2026-03-20 19:47:50] DEBUG: Running with minimum overlap 5000
+[2026-03-20 19:47:50] DEBUG: Metagenome mode: N
+[2026-03-20 19:47:50] INFO: Reading sequences
+[2026-03-20 19:48:21] DEBUG: Building positional index
+[2026-03-20 19:48:21] DEBUG: Total sequence: 3801103172 bp
+[2026-03-20 19:48:22] DEBUG: Expected read coverage: 1000
+[2026-03-20 19:48:22] INFO: Generating solid k-mer index
+[2026-03-20 19:48:22] DEBUG: Hard threshold set to 5
+[2026-03-20 19:48:22] DEBUG: Started k-mer counting
+[2026-03-20 19:48:46] INFO: Counting k-mers (1/2):
+[2026-03-20 22:19:28] root: INFO: Starting Flye 2.7-b1585
+[2026-03-20 22:19:28] root: DEBUG: Cmd: /home/aceren/anaconda3/envs/aceren_env/bin/flye --nano-raw data/raw/SRR24651220_stratejik.fastq --out-dir results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1 --threads 1 --genome-size 3.8m --asm-coverage 100
+[2026-03-20 22:19:28] root: DEBUG: Python version: 3.6.13 |Anaconda, Inc.| (default, Jun  4 2021, 14:25:59) 
+[GCC 7.5.0]
+[2026-03-20 22:19:28] root: INFO: >>>STAGE: configure
+[2026-03-20 22:19:28] root: INFO: Configuring run
+[2026-03-20 22:19:35] root: INFO: Total read length: 949831249
+[2026-03-20 22:19:35] root: INFO: Input genome size: 3800000
+[2026-03-20 22:19:35] root: INFO: Estimated coverage: 249
+[2026-03-20 22:19:35] root: INFO: Reads N50/N90: 24214 / 8070
+[2026-03-20 22:19:35] root: INFO: Minimum overlap set to 5000
+[2026-03-20 22:19:35] root: INFO: Selected k-mer size: 15
+[2026-03-20 22:19:35] root: INFO: Using longest 100x reads for contig assembly
+[2026-03-20 22:19:35] root: DEBUG: Min read length cutoff: 27934
+[2026-03-20 22:19:35] root: INFO: >>>STAGE: assembly
+[2026-03-20 22:19:35] root: INFO: Assembling disjointigs
+[2026-03-20 22:19:35] root: DEBUG: -----Begin assembly log------
+[2026-03-20 22:19:35] root: DEBUG: Running: flye-modules assemble --reads data/raw/SRR24651220_stratejik.fastq --out-asm /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/00-assembly/draft_assembly.fasta --genome-size 3800000 --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 1 --min-ovlp 5000 --kmer 15 --min-read 27934
+[2026-03-20 22:19:35] DEBUG: Build date: Mar  4 2020 02:13:03
+[2026-03-20 22:19:35] DEBUG: Total RAM: 7 Gb
+[2026-03-20 22:19:35] DEBUG: Available RAM: 7 Gb
+[2026-03-20 22:19:35] DEBUG: Total CPUs: 20
+[2026-03-20 22:19:35] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 22:19:35] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 22:19:35] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 22:19:35] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 22:19:35] DEBUG: 	chimera_window=100
+[2026-03-20 22:19:35] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 22:19:35] DEBUG: 	max_inner_reads=10
+[2026-03-20 22:19:35] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 22:19:35] DEBUG: 	max_separation=500
+[2026-03-20 22:19:35] DEBUG: 	unique_edge_length=50000
+[2026-03-20 22:19:35] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 22:19:35] DEBUG: 	out_paths_ratio=5
+[2026-03-20 22:19:35] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 22:19:35] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 22:19:35] DEBUG: 	max_bubble_length=50000
+[2026-03-20 22:19:35] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 22:19:35] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 22:19:35] DEBUG: 	weak_detach_rate=5
+[2026-03-20 22:19:35] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 22:19:35] DEBUG: 	tip_length_rate=2
+[2026-03-20 22:19:35] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 22:19:35] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 22:19:35] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 22:19:35] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 22:19:35] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 22:19:35] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 22:19:35] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 22:19:35] DEBUG: 	maximum_jump=1500
+[2026-03-20 22:19:35] DEBUG: 	maximum_overhang=1500
+[2026-03-20 22:19:35] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 22:19:35] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 22:19:35] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 22:19:35] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 22:19:35] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 22:19:35] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 22:19:35] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 22:19:35] DEBUG: 	short_tip_length=20000
+[2026-03-20 22:19:35] DEBUG: 	long_tip_length=100000
+[2026-03-20 22:19:35] DEBUG: Running with k-mer size: 15
+[2026-03-20 22:19:35] DEBUG: Running with minimum overlap 5000
+[2026-03-20 22:19:35] DEBUG: Metagenome mode: N
+[2026-03-20 22:19:35] INFO: Reading sequences
+[2026-03-20 22:19:38] DEBUG: Building positional index
+[2026-03-20 22:19:38] DEBUG: Total sequence: 379983516 bp
+[2026-03-20 22:19:38] DEBUG: Expected read coverage: 99
+[2026-03-20 22:19:38] INFO: Generating solid k-mer index
+[2026-03-20 22:19:38] DEBUG: Hard threshold set to 5
+[2026-03-20 22:19:38] DEBUG: Started k-mer counting
+[2026-03-20 22:20:06] INFO: Counting k-mers (1/2):
+[2026-03-20 22:21:25] INFO: Counting k-mers (2/2):
+[2026-03-20 22:23:54] DEBUG: Estimated minimum kmer coverage: 10
+[2026-03-20 22:23:54] DEBUG: Filtered 2788559 erroneous k-mers
+[2026-03-20 22:23:54] DEBUG: Repetitive k-mer frequency: 7452
+[2026-03-20 22:23:54] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-03-20 22:23:54] INFO: Filling index table
+[2026-03-20 22:23:54] DEBUG: Sampling rate: 1
+[2026-03-20 22:23:54] DEBUG: Solid k-mers: 3780027
+[2026-03-20 22:23:54] DEBUG: K-mer index size: 281712556
+[2026-03-20 22:23:54] DEBUG: Mean k-mer frequency: 74.5266
+[2026-03-20 22:25:38] DEBUG: Sorting k-mer index
+[2026-03-20 22:25:40] DEBUG: Peak RAM usage: 1 Gb
+[2026-03-20 22:25:40] DEBUG: Estimating k-mer identity bias
+[2026-03-20 22:36:53] DEBUG: Median overlap divergence: 0.0670893
+[2026-03-20 22:36:53] DEBUG: K-mer estimate bias (true - est): 0.0291374
+[2026-03-20 22:36:53] DEBUG: Max divergence threshold set to 0.167089
+[2026-03-20 22:36:53] INFO: Extending reads
+[2026-03-20 22:36:53] DEBUG: Estimating overlap coverage
+[2026-03-20 22:47:43] INFO: Overlap-based coverage: 111
+[2026-03-20 22:47:43] INFO: Median overlap divergence: 0.0676425
+[2026-03-20 22:47:43] DEBUG: Sequence divergence distribution: 
+
+    |            *                    |                                                                  
+    |            *                    |                                                                  
+    |            *                    |                                                                  
+    |            *                    |                                                                  
+    |            **                   |                                                                  
+    |            **                   |                                                                  
+    |            **                   |                                                                  
+    |           ***                   |                                                                  
+    |           ***                   |                                                                  
+    |           ***                   |                                                                  
+    |           ****                  |                                                                  
+    |           ****                  |                                                                  
+    |           *****                 |                                                                  
+    |           *****                 |                                                                  
+    |           *****                 |                                                                  
+    |           ******                |                                                                  
+    |           *******               |                                                                  
+    |           ********              |                                                                  
+    |          ********** *           |                                                                  
+    |         ***************************************  **         *                                      
+    ----------------------------------------------------------------------------------------------------
+    0%        5%        10%       15%       20%       25%       30%       35%       40%       45%       
+
+    Q25 = 0.062, Q50 = 0.068, Q75 = 0.078
+
+[2026-03-20 22:54:05] DEBUG: Assembled disjointig 1
+	With 498 reads
+	Start read: +SRR24651220.140666
+	At position: 488
+	leftTip: 0 rightTip: 0
+	Suspicious: 0
+	Mean extensions: 92
+	Avg overlap len: 46687
+	Min overlap len: 6760
+	Inner reads: 0
+	Length: 3282646
+[2026-03-20 22:54:05] DEBUG: Ovlp index size: 318913
+[2026-03-20 22:54:06] DEBUG: Inner: 19816 covered: 20364 total: 20538
+[2026-03-20 22:56:12] INFO: Assembled 1 disjointigs
+[2026-03-20 22:56:12] INFO: Generating sequence
+[2026-03-20 23:02:48] DEBUG: Writing FASTA
+[2026-03-20 23:02:48] DEBUG: Peak RAM usage: 2 Gb
+-----------End assembly log------------
+[2026-03-20 23:02:48] root: DEBUG: Disjointigs length: 3285555, N50: 3285555
+[2026-03-20 23:02:48] root: INFO: >>>STAGE: consensus
+[2026-03-20 23:02:48] root: INFO: Running Minimap2
+[2026-03-20 23:07:10] root: INFO: Computing consensus
+[2026-03-20 23:15:59] root: INFO: Alignment error rate: 0.082866
+[2026-03-20 23:15:59] root: INFO: >>>STAGE: repeat
+[2026-03-20 23:15:59] root: INFO: Building and resolving repeat graph
+[2026-03-20 23:15:59] root: DEBUG: -----Begin repeat analyser log------
+[2026-03-20 23:15:59] root: DEBUG: Running: flye-modules repeat --disjointigs /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/10-consensus/consensus.fasta --reads data/raw/SRR24651220_stratejik.fastq --out-dir /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/20-repeat --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 1 --min-ovlp 5000 --kmer 15
+[2026-03-20 23:15:59] DEBUG: Build date: Mar  4 2020 02:13:42
+[2026-03-20 23:15:59] DEBUG: Total RAM: 7 Gb
+[2026-03-20 23:15:59] DEBUG: Available RAM: 7 Gb
+[2026-03-20 23:15:59] DEBUG: Total CPUs: 20
+[2026-03-20 23:15:59] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 23:15:59] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 23:15:59] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 23:15:59] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 23:15:59] DEBUG: 	chimera_window=100
+[2026-03-20 23:15:59] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 23:15:59] DEBUG: 	max_inner_reads=10
+[2026-03-20 23:15:59] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 23:15:59] DEBUG: 	max_separation=500
+[2026-03-20 23:15:59] DEBUG: 	unique_edge_length=50000
+[2026-03-20 23:15:59] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 23:15:59] DEBUG: 	out_paths_ratio=5
+[2026-03-20 23:15:59] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 23:15:59] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 23:15:59] DEBUG: 	max_bubble_length=50000
+[2026-03-20 23:15:59] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 23:15:59] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 23:15:59] DEBUG: 	weak_detach_rate=5
+[2026-03-20 23:15:59] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 23:15:59] DEBUG: 	tip_length_rate=2
+[2026-03-20 23:15:59] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 23:15:59] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 23:15:59] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 23:15:59] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 23:15:59] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 23:15:59] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 23:15:59] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 23:15:59] DEBUG: 	maximum_jump=1500
+[2026-03-20 23:15:59] DEBUG: 	maximum_overhang=1500
+[2026-03-20 23:15:59] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 23:15:59] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 23:15:59] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 23:15:59] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 23:15:59] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 23:15:59] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 23:15:59] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 23:15:59] DEBUG: 	short_tip_length=20000
+[2026-03-20 23:15:59] DEBUG: 	long_tip_length=100000
+[2026-03-20 23:15:59] DEBUG: Running with k-mer size: 15
+[2026-03-20 23:15:59] DEBUG: Selected minimum overlap 5000
+[2026-03-20 23:15:59] DEBUG: Metagenome mode: N
+[2026-03-20 23:15:59] INFO: Parsing disjointigs
+[2026-03-20 23:15:59] DEBUG: Building positional index
+[2026-03-20 23:15:59] DEBUG: Total sequence: 3304699 bp
+[2026-03-20 23:15:59] INFO: Building repeat graph
+[2026-03-20 23:15:59] DEBUG: Hard threshold set to 1
+[2026-03-20 23:15:59] DEBUG: Started k-mer counting
+[2026-03-20 23:16:20] DEBUG: Repetitive k-mer frequency: 107
+[2026-03-20 23:16:20] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-03-20 23:16:20] DEBUG: Sampling rate: 1
+[2026-03-20 23:16:20] DEBUG: Solid k-mers: 3070255
+[2026-03-20 23:16:20] DEBUG: K-mer index size: 3304684
+[2026-03-20 23:16:20] DEBUG: Mean k-mer frequency: 1.07635
+[2026-03-20 23:16:21] DEBUG: Sorting k-mer index
+[2026-03-20 23:16:26] DEBUG: Computing transitive closure for overlaps
+[2026-03-20 23:16:26] DEBUG: Found 104 overlaps
+[2026-03-20 23:16:26] DEBUG: Left 44 overlaps after filtering
+[2026-03-20 23:16:26] INFO: Median overlap divergence: 0.00798017
+[2026-03-20 23:16:26] DEBUG: Sequence divergence distribution: 
+
+    | *                  |                                                                               
+    | *                  |                                                                               
+    | *                  |                                                                               
+    | *                  |                                                                               
+    | *                  |                                                                               
+    | *                  |                                                                               
+    |**                  |                                                                               
+    |**                  |                                                                               
+    |**                  |                                                                               
+    |**                  |                                                                               
+    |**                  |                                                                               
+    |**                  |                                                                               
+    |**                  |                                                                               
+    |**  * *             |                                                                               
+    |**  * *             |                                                                               
+    |**  * *             |                                                                               
+    |**  * *             |                                                                               
+    |**  * *             |                                                                               
+    |**  * *             |                                                                               
+    |**  * *             |                                                                               
+    ----------------------------------------------------------------------------------------------------
+    0%        5%        10%       15%       20%       25%       30%       35%       40%       45%       
+
+    Q25 = 0.00085, Q50 = 0.008, Q75 = 0.022
+
+[2026-03-20 23:16:26] DEBUG: Computing gluepoints
+[2026-03-20 23:16:26] DEBUG: Added 0 gluepoint projections
+[2026-03-20 23:16:26] DEBUG: Created 28 gluepoints
+[2026-03-20 23:16:26] DEBUG: Tandems removed: 0 left, 0 right, 0 both
+[2026-03-20 23:16:26] DEBUG: Initializing edges
+[2026-03-20 23:16:26] DEBUG: Edges length checksum: 1872610815
+[2026-03-20 23:16:26] DEBUG: Filtered 0 singleton segments
+[2026-03-20 23:16:26] DEBUG: Removed 0 simple and 0 double chimeric junctions
+[2026-03-20 23:16:26] DEBUG: Collapsed 1 edges
+[2026-03-20 23:16:26] DEBUG: *	10	+disjointig_1	109701	2336760	2227059		1	4
+[2026-03-20 23:16:26] DEBUG:  	4	+disjointig_1	2336760	2342220	5460		4	6
+[2026-03-20 23:16:26] DEBUG: *	-7	+disjointig_1	2342220	2582031	239811		6	4
+[2026-03-20 23:16:26] DEBUG:  	4	+disjointig_1	2582031	2587261	5230		4	6
+[2026-03-20 23:16:26] DEBUG: *	-6	+disjointig_1	2587261	2833242	245981		6	4
+[2026-03-20 23:16:26] DEBUG:  	4	+disjointig_1	2833242	2838823	5581		4	6
+[2026-03-20 23:16:26] DEBUG: *	-5	+disjointig_1	2838823	3011716	172893		6	4
+[2026-03-20 23:16:26] DEBUG:  	4	+disjointig_1	3011716	3016980	5264		4	6
+[2026-03-20 23:16:26] DEBUG: *	8	+disjointig_1	3016980	3088203	71223		6	7
+[2026-03-20 23:16:26] DEBUG:  	-4	+disjointig_1	3088203	3093671	5468		7	5
+[2026-03-20 23:16:26] DEBUG: *	9	+disjointig_1	3093671	3304697	211026		5	1
+[2026-03-20 23:16:26] DEBUG: Total edges: 10
+[2026-03-20 23:16:27] INFO: Parsing reads
+[2026-03-20 23:16:43] DEBUG: Building positional index
+[2026-03-20 23:16:43] DEBUG: Total sequence: 949831249 bp
+[2026-03-20 23:16:43] DEBUG: Building positional index
+[2026-03-20 23:16:43] DEBUG: Total sequence: 3194996 bp
+[2026-03-20 23:16:43] INFO: Aligning reads to the graph
+[2026-03-20 23:16:43] DEBUG: Hard threshold set to 1
+[2026-03-20 23:16:43] DEBUG: Started k-mer counting
+[2026-03-20 23:17:05] DEBUG: Repetitive k-mer frequency: 104
+[2026-03-20 23:17:05] DEBUG: Filtered 0 repetitive k-mers (0)
+[2026-03-20 23:17:05] DEBUG: Sampling rate: 1
+[2026-03-20 23:17:05] DEBUG: Solid k-mers: 3069290
+[2026-03-20 23:17:05] DEBUG: K-mer index size: 3194831
+[2026-03-20 23:17:05] DEBUG: Mean k-mer frequency: 1.0409
+[2026-03-20 23:17:06] DEBUG: Sorting k-mer index
+[2026-03-20 23:26:35] DEBUG: Total reads : 46226
+[2026-03-20 23:26:35] DEBUG: Read with aligned parts : 45440
+[2026-03-20 23:26:35] DEBUG: Aligned in one piece : 45059
+[2026-03-20 23:26:35] INFO: Aligned read sequence: 889077339 / 902508915 (0.985117)
+[2026-03-20 23:26:35] INFO: Median overlap divergence: 0.0198729
+[2026-03-20 23:26:35] DEBUG: Sequence divergence distribution: 
+
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   *                                              |                                                 
+    |   **                                             |                                                 
+    |   **                                             |                                                 
+    |  ***                                             |                                                 
+    |  ***                                             |                                                 
+    |  ***                                             |                                                 
+    |  ****                                            |                                                 
+    |  ****                                            |                                                 
+    |  *****                                           |                                                 
+    |  *****                                           |                                                 
+    |  *******                                         |                                                 
+    | *********************************************** *****  **           *                              
+    ----------------------------------------------------------------------------------------------------
+    0%        5%        10%       15%       20%       25%       30%       35%       40%       45%       
+
+    Q25 = 0.016, Q50 = 0.02, Q75 = 0.027
+
+[2026-03-20 23:26:35] INFO: Mean edge coverage: 280
+[2026-03-20 23:26:35] DEBUG: 4	len:5400	cov:1689	mult:6.03214
+[2026-03-20 23:26:35] DEBUG: -4	len:5400	cov:1689	mult:6.03214
+[2026-03-20 23:26:35] DEBUG: 5	len:172893	cov:371	mult:1.325
+[2026-03-20 23:26:35] DEBUG: -5	len:172893	cov:371	mult:1.325
+[2026-03-20 23:26:35] DEBUG: 6	len:245981	cov:322	mult:1.15
+[2026-03-20 23:26:35] DEBUG: -6	len:245981	cov:322	mult:1.15
+[2026-03-20 23:26:35] DEBUG: 7	len:239811	cov:282	mult:1.00714
+[2026-03-20 23:26:35] DEBUG: -7	len:239811	cov:282	mult:1.00714
+[2026-03-20 23:26:35] DEBUG: 8	len:71223	cov:376	mult:1.34286
+[2026-03-20 23:26:35] DEBUG: -8	len:71223	cov:376	mult:1.34286
+[2026-03-20 23:26:35] DEBUG: 9	len:211026	cov:366	mult:1.30714
+[2026-03-20 23:26:35] DEBUG: -9	len:211026	cov:366	mult:1.30714
+[2026-03-20 23:26:35] DEBUG: 10	len:2227059	cov:253	mult:0.903571
+[2026-03-20 23:26:35] DEBUG: -10	len:2227059	cov:253	mult:0.903571
+[2026-03-20 23:26:35] DEBUG: Unique coverage threshold 649
+[2026-03-20 23:26:35] INFO: Simplifying the graph
+[2026-03-20 23:26:35] DEBUG: Read coverage cutoff: 56
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Removed 0 paths with low coverage
+[2026-03-20 23:26:35] DEBUG: Finding repeats
+[2026-03-20 23:26:35] DEBUG: Read coverage cutoff: 56
+[2026-03-20 23:26:35] DEBUG: High-cov: 4	5400	1689
+[2026-03-20 23:26:35] DEBUG: Repeat detection iteration 1
+[2026-03-20 23:26:35] DEBUG: Writing Dot
+[2026-03-20 23:26:35] DEBUG: Writing FASTA
+[2026-03-20 23:26:35] DEBUG: [SIMPL] == Iteration 1 ==
+[2026-03-20 23:26:35] DEBUG: Splitting nodes
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Split 0 nodes
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Clipped 0 short and 0 long tips
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Masked 0 heterozygous loops
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Masked 0 simple bubbles
+[2026-03-20 23:26:35] DEBUG: Finding repeats
+[2026-03-20 23:26:35] DEBUG: Read coverage cutoff: 56
+[2026-03-20 23:26:35] DEBUG: High-cov: 4	5400	1689
+[2026-03-20 23:26:35] DEBUG: Repeat detection iteration 1
+[2026-03-20 23:26:35] DEBUG: Total unique edges: 6
+[2026-03-20 23:26:35] DEBUG: 	Connection 10	-7	176	1
+[2026-03-20 23:26:35] DEBUG: 	Connection 6	7	226	1
+[2026-03-20 23:26:35] DEBUG: 	Connection -6	-5	255	1
+[2026-03-20 23:26:35] DEBUG: 	Connection 8	9	255	1
+[2026-03-20 23:26:35] DEBUG: 	Connection -8	5	242	1
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Resolved repeats: 5
+[2026-03-20 23:26:35] DEBUG: RR links: 2308
+[2026-03-20 23:26:35] DEBUG: Unresolved: 0
+[2026-03-20 23:26:35] DEBUG: Removed 0 simple and 0 double chimeric junctions
+[2026-03-20 23:26:35] DEBUG: [SIMPL] == Iteration 2 ==
+[2026-03-20 23:26:35] DEBUG: Splitting nodes
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Split 0 nodes
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Clipped 0 short and 0 long tips
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Masked 0 heterozygous loops
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Masked 0 simple bubbles
+[2026-03-20 23:26:35] DEBUG: Finding repeats
+[2026-03-20 23:26:35] DEBUG: Read coverage cutoff: 56
+[2026-03-20 23:26:35] DEBUG: Repeat detection iteration 1
+[2026-03-20 23:26:35] DEBUG: Total unique edges: 11
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Resolved repeats: 0
+[2026-03-20 23:26:35] DEBUG: RR links: 0
+[2026-03-20 23:26:35] DEBUG: Unresolved: 0
+[2026-03-20 23:26:35] DEBUG: Removed 0 simple and 0 double chimeric junctions
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Collapsed 0 haplotypes
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Resolved 0 simple repeats
+[2026-03-20 23:26:35] DEBUG: Read coverage cutoff: 56
+[2026-03-20 23:26:35] DEBUG: [SIMPL] Removed 0 paths with low coverage
+[2026-03-20 23:26:35] DEBUG: Finding repeats
+[2026-03-20 23:26:35] DEBUG: Read coverage cutoff: 56
+[2026-03-20 23:26:35] DEBUG: Repeat detection iteration 1
+[2026-03-20 23:26:35] DEBUG: Writing Dot
+[2026-03-20 23:26:35] DEBUG: Writing FASTA
+[2026-03-20 23:26:35] DEBUG: Peak RAM usage: 1 Gb
+-----------End assembly log------------
+[2026-03-20 23:26:35] root: INFO: >>>STAGE: contigger
+[2026-03-20 23:26:35] root: INFO: Generating contigs
+[2026-03-20 23:26:35] root: DEBUG: -----Begin contigger analyser log------
+[2026-03-20 23:26:35] root: DEBUG: Running: flye-modules contigger --graph-edges /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/20-repeat/repeat_graph_edges.fasta --reads data/raw/SRR24651220_stratejik.fastq --out-dir /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/30-contigger --config /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg --repeat-graph /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/20-repeat/repeat_graph_dump --graph-aln /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/20-repeat/read_alignment_dump --log /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/flye.log --threads 1 --min-ovlp 5000 --kmer 15
+[2026-03-20 23:26:35] DEBUG: Build date: Mar  4 2020 02:14:18
+[2026-03-20 23:26:35] DEBUG: Total RAM: 7 Gb
+[2026-03-20 23:26:35] DEBUG: Available RAM: 7 Gb
+[2026-03-20 23:26:35] DEBUG: Total CPUs: 20
+[2026-03-20 23:26:35] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_raw_reads.cfg
+[2026-03-20 23:26:35] DEBUG: Loading /home/aceren/anaconda3/envs/aceren_env/lib/python3.6/site-packages/flye/config/bin_cfg/asm_defaults.cfg
+[2026-03-20 23:26:35] DEBUG: 	big_genome_threshold=29000000
+[2026-03-20 23:26:35] DEBUG: 	max_coverage_drop_rate=5
+[2026-03-20 23:26:35] DEBUG: 	chimera_window=100
+[2026-03-20 23:26:35] DEBUG: 	min_reads_in_disjointig=4
+[2026-03-20 23:26:35] DEBUG: 	max_inner_reads=10
+[2026-03-20 23:26:35] DEBUG: 	max_inner_fraction=0.25
+[2026-03-20 23:26:35] DEBUG: 	max_separation=500
+[2026-03-20 23:26:35] DEBUG: 	unique_edge_length=50000
+[2026-03-20 23:26:35] DEBUG: 	min_repeat_res_support=0.51
+[2026-03-20 23:26:35] DEBUG: 	out_paths_ratio=5
+[2026-03-20 23:26:35] DEBUG: 	graph_cov_drop_rate=5
+[2026-03-20 23:26:35] DEBUG: 	coverage_estimate_window=100
+[2026-03-20 23:26:35] DEBUG: 	max_bubble_length=50000
+[2026-03-20 23:26:35] DEBUG: 	loop_coverage_rate=1.5
+[2026-03-20 23:26:35] DEBUG: 	repeat_edge_cov_mult=1.75
+[2026-03-20 23:26:35] DEBUG: 	weak_detach_rate=5
+[2026-03-20 23:26:35] DEBUG: 	tip_coverage_rate=2
+[2026-03-20 23:26:35] DEBUG: 	tip_length_rate=2
+[2026-03-20 23:26:35] DEBUG: 	low_cutoff_warning=1
+[2026-03-20 23:26:35] DEBUG: 	hard_min_coverage_rate=10
+[2026-03-20 23:26:35] DEBUG: 	assemble_kmer_sample=1
+[2026-03-20 23:26:35] DEBUG: 	repeat_graph_kmer_sample=1
+[2026-03-20 23:26:35] DEBUG: 	read_align_kmer_sample=1
+[2026-03-20 23:26:35] DEBUG: 	meta_read_top_kmer_rate=0.25
+[2026-03-20 23:26:35] DEBUG: 	meta_read_filter_kmer_freq=10
+[2026-03-20 23:26:35] DEBUG: 	maximum_jump=1500
+[2026-03-20 23:26:35] DEBUG: 	maximum_overhang=1500
+[2026-03-20 23:26:35] DEBUG: 	repeat_kmer_rate=100
+[2026-03-20 23:26:35] DEBUG: 	assemble_ovlp_relative_divergence=0.10
+[2026-03-20 23:26:35] DEBUG: 	repeat_graph_ovlp_divergence=0.10
+[2026-03-20 23:26:35] DEBUG: 	read_align_ovlp_divergence=0.25
+[2026-03-20 23:26:35] DEBUG: 	add_unassembled_reads=0
+[2026-03-20 23:26:35] DEBUG: 	extend_contigs_with_repeats=1
+[2026-03-20 23:26:35] DEBUG: 	min_read_cov_cutoff=3
+[2026-03-20 23:26:35] DEBUG: 	short_tip_length=20000
+[2026-03-20 23:26:35] DEBUG: 	long_tip_length=100000
+[2026-03-20 23:26:35] DEBUG: Running with k-mer size: 15
+[2026-03-20 23:26:35] DEBUG: Selected minimum overlap 5000
+[2026-03-20 23:26:35] INFO: Reading sequences
+[2026-03-20 23:26:39] DEBUG: Building positional index
+[2026-03-20 23:26:39] DEBUG: Total sequence: 949831249 bp
+[2026-03-20 23:26:39] DEBUG: Flipped 0
+[2026-03-20 23:26:39] DEBUG: UPath 1: -13 -> 6 -> -12 -> 7 -> -11 -> -10 -> -9 -> -14 -> -8 -> 15 -> 5
+[2026-03-20 23:26:39] DEBUG: Final graph contiain 1 egdes
+[2026-03-20 23:26:39] DEBUG: Extending contigs into repeats
+[2026-03-20 23:26:39] DEBUG: Covered 0 repetitive contigs
+[2026-03-20 23:26:39] INFO: Generated 1 contigs
+[2026-03-20 23:26:39] DEBUG: Writing FASTA
+[2026-03-20 23:26:39] DEBUG: Generating scaffold connections
+[2026-03-20 23:26:39] INFO: Added 0 scaffold connections
+[2026-03-20 23:26:39] DEBUG: Writing Dot
+[2026-03-20 23:26:39] DEBUG: Writing FASTA
+[2026-03-20 23:26:39] DEBUG: Writing Gfa
+[2026-03-20 23:26:39] DEBUG: Peak RAM usage: 0 Gb
+-----------End assembly log------------
+[2026-03-20 23:26:39] root: INFO: >>>STAGE: polishing
+[2026-03-20 23:26:39] root: INFO: Polishing genome (1/1)
+[2026-03-20 23:26:39] root: INFO: Running minimap2
+[2026-03-20 23:30:46] root: INFO: Separating alignment into bubbles
+[2026-03-20 23:41:41] root: DEBUG: Generated 210936 bubbles
+[2026-03-20 23:41:41] root: DEBUG: Split 0 long bubbles
+[2026-03-20 23:41:41] root: DEBUG: Skipped 0 empty bubbles
+[2026-03-20 23:41:41] root: DEBUG: Skipped 0 bubbles with long branches
+[2026-03-20 23:41:42] root: INFO: Alignment error rate: 0.047183
+[2026-03-20 23:41:42] root: INFO: Correcting bubbles
+[2026-03-20 23:43:27] root: DEBUG: Mean contig coverage: 293, selected threshold: 59
+[2026-03-20 23:43:27] root: DEBUG: Filtered 0 contigs of total length 0
+[2026-03-20 23:43:27] root: DEBUG: Generating polished GFA
+[2026-03-20 23:43:29] root: DEBUG: 0 sequences remained unpolished
+[2026-03-20 23:43:29] root: INFO: >>>STAGE: finalize
+[2026-03-20 23:43:29] root: DEBUG: ---Output dir contents:----
+[2026-03-20 23:43:29] root: DEBUG: SRR24651220_1/
+[2026-03-20 23:43:29] root: DEBUG:     3.0 M       assembly_graph.gfa
+[2026-03-20 23:43:29] root: DEBUG:     3.0 M       assembly.fasta
+[2026-03-20 23:43:29] root: DEBUG:     195.0 B     assembly_graph.gv
+[2026-03-20 23:43:29] root: DEBUG:     66.0 K      flye.log
+[2026-03-20 23:43:29] root: DEBUG:     113.0 B     params.json
+[2026-03-20 23:43:29] root: DEBUG:     40-polishing/
+[2026-03-20 23:43:29] root: DEBUG:         47.0 B      contigs_stats.txt
+[2026-03-20 23:43:29] root: DEBUG:         26.0 B      filtered_contigs.fasta.fai
+[2026-03-20 23:43:29] root: DEBUG:         47.0 B      filtered_stats.txt
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       filtered_contigs.fasta
+[2026-03-20 23:43:29] root: DEBUG:         112.0 B     chunks_1.fasta.fai
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       polished_edges.gfa
+[2026-03-20 23:43:29] root: DEBUG:     30-contigger/
+[2026-03-20 23:43:29] root: DEBUG:         113.0 B     contigs_stats.txt
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       graph_final.gfa
+[2026-03-20 23:43:29] root: DEBUG:         195.0 B     graph_final.gv
+[2026-03-20 23:43:29] root: DEBUG:         0.0 B       scaffolds_links.txt
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       contigs.fasta
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       graph_final.fasta
+[2026-03-20 23:43:29] root: DEBUG:     20-repeat/
+[2026-03-20 23:43:29] root: DEBUG:         2.0 K       repeat_graph_dump
+[2026-03-20 23:43:29] root: DEBUG:         1.0 K       graph_after_rr.gv
+[2026-03-20 23:43:29] root: DEBUG:         921.0 B     graph_before_rr.gv
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       graph_before_rr.fasta
+[2026-03-20 23:43:29] root: DEBUG:         12.0 M      read_alignment_dump
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       repeat_graph_edges.fasta
+[2026-03-20 23:43:29] root: DEBUG:     10-consensus/
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       consensus.fasta
+[2026-03-20 23:43:29] root: DEBUG:         124.0 B     chunks.fasta.fai
+[2026-03-20 23:43:29] root: DEBUG:     00-assembly/
+[2026-03-20 23:43:29] root: DEBUG:         3.0 M       draft_assembly.fasta
+[2026-03-20 23:43:29] root: DEBUG: --------------------------
+[2026-03-20 23:43:29] root: INFO: Assembly statistics:
+
+	Total length:	3196591
+	Fragments:	1
+	Fragments N50:	3196591
+	Largest frg:	3196591
+	Scaffolds:	0
+	Mean coverage:	293
+
+[2026-03-20 23:43:29] root: INFO: Final assembly: /home/aceren/GenoDiplo/results/Genomics/1_Assembly/2_Assemblers/flye/SRR24651220_1/assembly.fasta

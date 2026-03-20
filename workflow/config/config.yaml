@@ -1,0 +1,17 @@
+data_dir: "data/raw"
+results_dir: "results/Genome"
+
+
+samples:
+- SRR24651203
+- SRR24651220_1
+
+threads:
+
+  high: 8
+  medium: 4
+  low: 2
+
+params:
+  genome_size: "3.8m"
+  min_read_length: 1000

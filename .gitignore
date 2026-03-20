@@ -1,0 +1,6 @@
+data/
+results/Genomics/1_Assembly/1_QC/
+*.fastq
+*.fastq.gz
+.snakemake/
+data/

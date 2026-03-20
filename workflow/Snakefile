@@ -1,0 +1,10 @@
+configfile: "workflow/config/config.yaml"
+
+# Proje çıktıları
+rule all:
+    input:
+        expand("results/Genomics/1_Assembly/2_Assemblers/flye/{sample}/assembly.fasta", sample=config["samples"]),
+        expand("results/Genomics/1_Assembly/3_Evaluation/quast/{sample}/report.html", sample=config["samples"])
+
+include: "rules/1_assembly.smk"
+include: "rules/2_annotation.smk"

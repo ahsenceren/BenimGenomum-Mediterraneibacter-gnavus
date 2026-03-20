@@ -1,0 +1,1 @@
+{"pipeline_version": 3, "min_overlap": 5000, "kmer_size": 15, "min_read_length": 27934, "stage_name": "finalize"}
