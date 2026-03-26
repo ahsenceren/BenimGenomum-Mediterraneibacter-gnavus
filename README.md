@@ -1,4 +1,4 @@
-#MAKE YOUR OWN GENOME PROJECT
+**#MAKE YOUR OWN GENOME PROJECT
 
 #1.Abstract & Aim Of Project
 Within the scope of the ‘Build Your Own Genome’ competition, Mediterraneibacter gnavus, a species of relevance to the gut microbiota,to the gut microbiota, was selected.
@@ -92,7 +92,7 @@ rule quast:
   #Technical Problem: Repository bloat caused by .snakemake cache resulted in GitHub push rejection.
   #Solution: Executed a hard-purge of the Git index and established a granular .gitignore to sync only the 8.65 MiB of analytical core data.
 
-#5 QUAST Comparison Results
+	#5 QUAST Comparison Results
 
 The following metrics represent the final assembly quality of Mediterraneibacter gnavus (Sample: SRR24651220). 
 Achieving a single-contig assembly confirms the success of the heuristic filtering and resource-aware pipeline configuration.
@@ -107,7 +107,7 @@ Achieving a single-contig assembly confirms the success of the heuristic filteri
 
 > The assembly was validated using QUAST v5.2.0. The high N50 value indicates that the Oxford Nanopore long-reads were successfully resolved into a high-fidelity reference-grade genome.
 
-#6 Future Perspective
+	#6 Future Perspective
 
 Leveraging the high-contiguity genomic blueprint generated in this study,
 the next investigative phase aims to elucidate the ecological determinants
