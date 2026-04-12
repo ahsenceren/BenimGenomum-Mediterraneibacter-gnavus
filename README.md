@@ -45,7 +45,7 @@ rule quast:
     input: "results/Genomics/1_Assembly/2_Assemblers/flye/{sample}/assembly.fasta"
     output: "results/Genomics/1_Assembly/3_Evaluation/quast/{sample}/report.html"
     conda: "envs/genomics.yaml"
-    script: "scripts/Genomics/1_Assembly/3_Evaluation/QuastEvaluation.py"
+    script: "scripts/Genomics/1_Assembly/3_Evaluation/QuastEvaluation.py"```
 
 ## 4. Troubleshooting Report
 - Snakemake: Fixed DirectoryNotEmpty by using explicit directory() flags.
@@ -53,6 +53,7 @@ rule quast:
 - GitHub: Purged .snakemake cache to solve push rejection.
 
 ## 5. QUAST Comparison Results
+
 | Metric | Final Value | Biological Interpretation |
 | :--- | :--- | :--- |
 | Total Length | 3,191,442 bp | Full genome representative of M. gnavus. |
@@ -61,6 +62,5 @@ rule quast:
 | GC Content | 44.22% | Consistent with phylogenetic standards. |
 
 ## 6. Future Perspective
-Leveraging the high-contiguity genomic blueprint generated in this study, the next investigative phase aims to elucidate the ecological determinants of intestinal homeostasis by exploring the competitive landscape between the pathobiont *Mediterraneibacter gnavus* and the beneficial commensal *Akkermansia muciniphila* within the mucin-utilization niche. 
-
-Proceeding from the hypothesis of competitive exclusion, subsequent research will utilize **in silico genome-scale metabolic modeling (GEMs)** derived from this assembly to simulate multi-species interactions under varied nutrient constraints. The objective is to determine if directed symbiotic expansion of *A. muciniphila* can effectively sequester limiting mucin substrates, thereby robustly suppressing *M. gnavus* population density and offering a novel, non-antibiotic therapeutic strategy to ameliorate inflammation by restoring microbial equilibrium in dysbiotic gut environments.```
+Leveraging the high-contiguity genomic blueprint generated in this study, the next investigative phase aims to elucidate the ecological determinants of intestinal homeostasis by exploring the competitive landscape between the pathobiont *Mediterraneibacter gnavus* and the beneficial commensal *Akkermansia muciniphila* within the mucin-utilization niche.
+Proceeding from the hypothesis of competitive exclusion, subsequent research will utilize **in silico genome-scale metabolic modeling (GEMs)** derived from this assembly to simulate multi-species interactions under varied nutrient constraints. The objective is to determine if directed symbiotic expansion of *A. muciniphila* can effectively sequester limiting mucin substrates, thereby robustly suppressing *M. gnavus* population density and offering a novel, non-antibiotic therapeutic strategy to ameliorate inflammation by restoring microbial equilibrium in dysbiotic gut environments.
