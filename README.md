@@ -10,7 +10,7 @@ Within the scope of the ‘Build Your Own Genome’ competition, *Mediterraneiba
 
 ## 3. config.yaml and Pipeline Configuration
 
-```text
+```python
 # --- CONFIGURATION ---
 data_dir: "data/raw"
 results_dir: "results/Genome"
@@ -24,8 +24,6 @@ threads:
 params:
   genome_size: "3.8m"
   min_read_length: 1000
-
-# --- SNAKEMAKE RULES ---
 
 rule fastqc_before_trimming:
     input: "data/raw/{sample}.fastq"
@@ -45,7 +43,8 @@ rule quast:
     input: "results/Genomics/1_Assembly/2_Assemblers/flye/{sample}/assembly.fasta"
     output: "results/Genomics/1_Assembly/3_Evaluation/quast/{sample}/report.html"
     conda: "envs/genomics.yaml"
-    script: "scripts/Genomics/1_Assembly/3_Evaluation/QuastEvaluation.py"```
+    script: "scripts/Genomics/1_Assembly/3_Evaluation/QuastEvaluation.py"
+```
 
 ## 4. Troubleshooting Report
 - Snakemake: Fixed DirectoryNotEmpty by using explicit directory() flags.
