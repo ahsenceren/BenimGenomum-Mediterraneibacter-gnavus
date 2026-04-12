@@ -1,32 +1,31 @@
 # MAKE YOUR OWN GENOME PROJECT
 
 ## 1. Abstract & Aim Of Project
-Within the scope of the ‘Build Your Own Genome’ competition, Mediterraneibacter gnavus, a species of relevance to the gut microbiota, was selected. This selection was motivated by evidence indicating that its mucin-degrading activity contributes to dysbiosis, particularly in autoimmune conditions, and is also associated with the induction of various inflammatory processes. The aim of this study is to reconstruct the genomic architecture of this pathobiont in silico through bioinformatics analyses and computational approaches.
+Within the scope of the ‘Build Your Own Genome’ competition, *Mediterraneibacter gnavus*, a species of relevance to the gut microbiota, was selected. This selection was motivated by evidence indicating that its mucin-degrading activity contributes to dysbiosis, particularly in autoimmune conditions, and is also associated with the induction of various inflammatory processes. The aim of this study is to reconstruct the genomic architecture of this pathobiont *in silico* through bioinformatics analyses and computational approaches.
 
 ## 2. NCBI Data & Data Source
 * **Source:** NCBI Sequence Read Archive
 * **Sequence Platform:** Oxford Nanopore
 * **NCBI Number:** SRR24651220
 
-
 ## 3. config.yaml and Pipeline Configuration
 
 ```text
+# --- CONFIGURATION ---
 data_dir: "data/raw"
 results_dir: "results/Genome"
-
 samples:
   - SRR24651203
   - SRR24651220_1
-
 threads:
   high: 8
   medium: 4
   low: 2
-
 params:
   genome_size: "3.8m"
   min_read_length: 1000
+
+# --- SNAKEMAKE RULES ---
 
 rule fastqc_before_trimming:
     input: "data/raw/{sample}.fastq"
@@ -49,18 +48,17 @@ rule quast:
     script: "scripts/Genomics/1_Assembly/3_Evaluation/QuastEvaluation.py"
 
 ## 4. Troubleshooting Report
-- The Snakemake & Core Management: Fixed DirectoryNotEmpty and MissingOutputException by implementing explicit directory() flags.
-- Overload & Memory Management: Optimized config.yaml to prevent heap memory overflow in Flye overlap phase.
-- Github Repository Bloat: Purged .snakemake cache and updated .gitignore to stay under quota.
+- Snakemake: Fixed DirectoryNotEmpty by using explicit directory() flags.
+- Memory: Optimized Flye overlap phase to prevent heap memory overflow.
+- GitHub: Purged .snakemake cache to solve push rejection.
 
 ## 5. QUAST Comparison Results
 | Metric | Final Value | Biological Interpretation |
 | :--- | :--- | :--- |
 | Total Length | 3,191,442 bp | Full genome representative of M. gnavus. |
 | Number of Contigs | 1 | Complete & Circularized genome achieved. |
-| N50 | 3,191,442 bp | Maximum possible contiguity for this isolate. |
-| GC Content | 44.22% | Consistent with M. gnavus standards. |
-
+| N50 | 3,191,442 bp | Maximum possible contiguity. |
+| GC Content | 44.22% | Consistent with phylogenetic standards. |
 
 ## 6. Future Perspective
 Leveraging the high-contiguity genomic blueprint generated in this study, the next investigative phase aims to elucidate the ecological determinants of intestinal homeostasis by exploring the competitive landscape between the pathobiont *Mediterraneibacter gnavus* and the beneficial commensal *Akkermansia muciniphila* within the mucin-utilization niche. 
